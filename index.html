@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-purple-200 via-blue-300 to-pink-200 flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+        <h2 class="text-2xl font-bold text-center text-purple-600 mb-6">
+            College Admission Help Portal
+        </h2>
+
+        <p class="text-center mb-5 text-gray-600">
+            Frequently Asked Questions
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 text-black rounded">
+                What is the primary purpose of a college admission portal's dashboard?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+               To show your application status, pending tasks, and announcements.
+            </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 text-black rounded">
+              Which file format is standard and most widely accepted for uploading transcripts and essays?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                PDF (.pdf) format, because it preserves document formatting.
+            </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 text-black rounded">
+                What does a status change from "In Progress" to "Submitted" mean for your application?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+              Your application materials have been successfully sent to the university.
+            </p>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 text-black rounded">
+                Where on the portal should you look if you experience a technical glitch while uploading documents?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                 The "Help," "FAQ," or "Contact Support" links on the page.
+            </p>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 text-black rounded">
+               How can you verify if the admissions office has received your letters of recommendation?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+               Check your personalized application checklist tab inside the portal.
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
